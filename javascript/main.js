@@ -1,18 +1,15 @@
-//privedeniya tipov
-//LexicalEnvironment ,   Scoup, [[Scoup]], class,?
+;(function(){
+    var cards = [
+        '<header class="header">kokoko</header>',
+        '<footer class="footer" onclick = "addCard()"> Add card...</footer>'
+    ];
+    var defaultCard = ' <div class="card"></div>';
+    var group = document.getElementsByClassName('group')[0];
+    group.innerHTML = cards;
 
-// var f = function(x){
-//     return function(y){
-//         return x + y;
-//     };
-// };
-// a = f(5);
-// console.log(a);
-// // sama vyzyvayushe funksi
-// var a = 5;
-// (function(){
-//     alert(a);
-// })()
+    window.addCard = function(){
+        cards.splice(cards.length - 1, 0 , defaultCard);
+        group.innerHTML = cards;
+    };
 
-
-
+})()
